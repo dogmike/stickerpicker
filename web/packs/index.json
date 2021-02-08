@@ -1,7 +1,10 @@
 {
   "packs": [
     "BlackGSD.json",
-    "dogmike.json"
+    "dogmike.json",
+    "Germanshepboistickies.json",
+    "KenLovesDogs.json",
+    "Shiba_Inu.json"
   ],
   "homeserver_url": "https://matrix-client.matrix.org"
 }
