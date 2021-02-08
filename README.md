@@ -20,7 +20,8 @@ Go to Element.
 First, if clicking the sticker button in the chat bar makes you search for stickers, and that just brings up a big empty box, you'll need to find the cookie icon in your URL bar and click through to an option about allowing third-party cookies. (I guess the integration manager needs a cookie.) 
 Visit the Room Info from the top right, click Room Settings, go to Advanced, then open DevTools and use "Send Account Data". Send an event called `m.widgets` with the following code: (Replace my GitHub Pages username with your own, if you've made a sticker picker.)
 
-```{
+```json
+{
   "stickerpicker":{
     "content":{
       "type":"m.stickerpicker",
@@ -33,7 +34,8 @@ Visit the Room Info from the top right, click Room Settings, go to Advanced, the
     "type":"m.widget",
     "id":"stickerpicker"
   }
-}```
+}
+```
 
 That should work! You'll probably need to restart Element.
 
