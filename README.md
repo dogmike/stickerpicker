@@ -7,7 +7,7 @@ This only seems to work on Linux systems with Python3. I managed to get it worki
 ### Setup ###
 1. If you're on Windows, go to the Windows store and install the Windows Subsystem for Linux. Or however they do it these days.
 2. On Linux, make sure you upgrade your package manager, and have python3 installed. You'll need to install python3 and python3-pip if you haven't already. Install git, too. Oh, and make an account on https://github.com.
-3. Go to https://github.com/maunium/stickerpicker and fork it. On your computer, clone stickerpicker from your own repo. `cd` into the repository folder and run `pip3 install .` to stage it.
+3. Go to https://github.com/maunium/stickerpicker and fork it. On your computer, clone stickerpicker from your own repo (`git clone`). `cd` into the repository folder and run `pip3 install .` to stage it.
 4. Then go to your GitHub.com repository's settings and (scroll down to GitHub Pages) put the Master branch on GitHub Pages for basic hosting. It'll make a URL at github.io that'll you'll use in Element for your own sticker picker.
 
 ### Using `sticker-pack`
@@ -20,7 +20,7 @@ Go to Element.
 First, if clicking the sticker button in the chat bar makes you search for stickers, and that just brings up a big empty box, you'll need to find the cookie icon in your URL bar and click through to an option about allowing third-party cookies. (I guess the integration manager needs a cookie.) 
 Visit the Room Info from the top right, click Room Settings, go to Advanced, then open DevTools and use "Send Account Data". Send an event called `m.widgets` with the following code: (Replace my GitHub Pages username with your own, if you've made a sticker picker.)
 
-`{
+```{
   "stickerpicker":{
     "content":{
       "type":"m.stickerpicker",
@@ -33,7 +33,7 @@ Visit the Room Info from the top right, click Room Settings, go to Advanced, the
     "type":"m.widget",
     "id":"stickerpicker"
   }
-}`
+}```
 
 That should work! You'll probably need to restart Element.
 
