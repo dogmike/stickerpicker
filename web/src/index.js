@@ -252,23 +252,12 @@ class App extends Component {
 
 const Settings = ({ app }) => html`
 	<section class="stickerpack settings" id="pack-settings" data-pack-id="settings">
-		<h1>Settings</h1>
 		<div class="settings-list">
 			<button onClick=${app.reloadPacks}>Reload</button>
 			<div>
-				<label for="stickers-per-row">Stickers per row: ${app.state.stickersPerRow}</label>
-				<input type="range" min=2 max=10 id="stickers-per-row" id="stickers-per-row"
+				<input type="range" min=1 max=6 id="stickers-per-row" id="stickers-per-row"
 					value=${app.state.stickersPerRow}
 					onInput=${evt => app.setStickersPerRow(evt.target.value)} />
-			</div>
-			<div>
-				<label for="theme">Theme: </label>
-				<select name="theme" id="theme" onChange=${evt => app.setTheme(evt.target.value)}>
-					<option value="default">Default</option>
-					<option value="light">Light</option>
-					<option value="dark">Dark</option>
-					<option value="black">Black</option>
-				</select>
 			</div>
 		</div>
 	</section>
